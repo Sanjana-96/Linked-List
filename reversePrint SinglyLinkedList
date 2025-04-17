@@ -1,0 +1,15 @@
+void reversePrint(SinglyLinkedListNode* llist) {
+
+ SinglyLinkedListNode* temp=llist;
+ stack<int>st;
+ int cnt=0;
+ while(temp!=NULL){
+    st.push(temp->data);
+    temp=temp->next;
+    cnt+=1;
+ }
+   for(int i=0;i<cnt;i++){
+      cout<< st.top()<<endl;
+      st.pop();
+   }
+}
